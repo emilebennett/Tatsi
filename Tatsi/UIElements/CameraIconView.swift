@@ -21,7 +21,12 @@ final internal class CameraIconView: UIView {
     }
     
     override func draw(_ rect: CGRect) {
-        let color = UIColor.gray
+        let color: UIColor
+        if #available(iOS 13.0, *) {
+            color = UIColor.systemGray.resolvedColor(with: self.traitCollection)
+        } else {
+            color = .gray
+        }
         
         //// Body Drawing
         let bodyPath = UIBezierPath()

@@ -39,7 +39,11 @@ final internal class AlbumTableViewCell: UITableViewCell {
     lazy private  var countLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.subheadline)
-        label.textColor = UIColor.gray
+        if #available(iOS 13.0, *) {
+            label.textColor = .secondaryLabel
+        } else {
+            label.textColor = .gray
+        }
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()

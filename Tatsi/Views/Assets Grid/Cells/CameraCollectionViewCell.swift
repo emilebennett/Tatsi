@@ -32,7 +32,11 @@ final internal class CameraCollectionViewCell: UICollectionViewCell {
     
     private func setupView() {
         self.contentView.addSubview(self.iconView)
-        self.contentView.backgroundColor = UIColor.lightGray
+        if #available(iOS 13.0, *) {
+            self.contentView.backgroundColor = .systemFill
+        } else {
+            self.contentView.backgroundColor = .lightGray
+        }
         
         self.accessibilityIdentifier = "tatsi.cell.camera"
         self.accessibilityLabel = LocalizableStrings.cameraButtonTitle

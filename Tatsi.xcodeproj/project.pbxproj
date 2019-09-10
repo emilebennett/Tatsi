@@ -45,6 +45,7 @@
 		0CBB287A1F12BEA600254034 /* AssetTypeIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBB28791F12BEA600254034 /* AssetTypeIconView.swift */; };
 		0CBB287E1F1389A800254034 /* TypeIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBB287D1F1389A800254034 /* TypeIcons.swift */; };
 		0CBB28801F138B4100254034 /* LocalizableStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBB287F1F138B4100254034 /* LocalizableStrings.swift */; };
+		432A395A2327D19200E2145D /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432A39592327D19200E2145D /* UIColorExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +128,7 @@
 		0CBB28791F12BEA600254034 /* AssetTypeIconView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetTypeIconView.swift; sourceTree = "<group>"; };
 		0CBB287D1F1389A800254034 /* TypeIcons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeIcons.swift; sourceTree = "<group>"; };
 		0CBB287F1F138B4100254034 /* LocalizableStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizableStrings.swift; sourceTree = "<group>"; };
+		432A39592327D19200E2145D /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,6 +231,7 @@
 			children = (
 				0C5B61941F0E3E13005A25CE /* PHAssetCollectionExtensions.swift */,
 				0C5B61961F0E3EDD005A25CE /* CGSizeExtensions.swift */,
+				432A39592327D19200E2145D /* UIColorExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -444,6 +447,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -520,6 +524,7 @@
 				0C5B61971F0E3EDD005A25CE /* CGSizeExtensions.swift in Sources */,
 				0CBB28751F0FE38D00254034 /* AuthorizationViewController.swift in Sources */,
 				0C5B61951F0E3E13005A25CE /* PHAssetCollectionExtensions.swift in Sources */,
+				432A395A2327D19200E2145D /* UIColorExtensions.swift in Sources */,
 				0C5B618D1F0E3924005A25CE /* SelectionIconView.swift in Sources */,
 				0C5B61931F0E39A6005A25CE /* AlbumTableViewCell.swift in Sources */,
 				0C76843A1FDEC32200514164 /* AlbumTitleView.swift in Sources */,

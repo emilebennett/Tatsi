@@ -123,7 +123,11 @@ final internal class AssetsGridViewController: UICollectionViewController, Picke
         self.collectionView?.register(AssetCollectionViewCell.self, forCellWithReuseIdentifier: AssetCollectionViewCell.reuseIdentifier)
         self.collectionView?.register(CameraCollectionViewCell.self, forCellWithReuseIdentifier: CameraCollectionViewCell.reuseIdentifier)
         
-        self.collectionView?.backgroundColor = .white
+        if #available(iOS 13.0, *) {
+            self.collectionView?.backgroundColor = .systemBackground
+        } else {
+            self.collectionView?.backgroundColor = .white
+        }
         
         self.collectionView?.accessibilityIdentifier = "tatsi.collectionView.photosGrid"
         

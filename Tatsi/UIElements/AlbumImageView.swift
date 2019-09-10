@@ -10,7 +10,7 @@ import UIKit
 
 final internal class AlbumImageView: UIView {
     
-    var linesColor = UIColor.black {
+    var linesColor = UIColor.defaultLinesColor {
         didSet {
             self.setNeedsDisplay()
         }

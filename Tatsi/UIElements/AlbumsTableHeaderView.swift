@@ -25,7 +25,11 @@ final internal class AlbumsTableHeaderView: UITableViewHeaderFooterView {
     lazy private var label: UILabel = {
         let label = UILabel()
         label.font = AlbumsTableHeaderView.font
-        label.textColor = UIColor.darkText
+        if #available(iOS 13.0, *) {
+            label.textColor = .secondaryLabel
+        } else {
+            label.textColor = .gray
+        }
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -49,7 +53,11 @@ final internal class AlbumsTableHeaderView: UITableViewHeaderFooterView {
     
     private func setupView() {
         self.contentView.addSubview(self.label)
-        self.contentView.backgroundColor = .white
+        if #available(iOS 13.0, *) {
+            self.contentView.backgroundColor = .systemBackground
+        } else {
+            self.contentView.backgroundColor = .white
+        }
         
         self.setupConstraints()
     }

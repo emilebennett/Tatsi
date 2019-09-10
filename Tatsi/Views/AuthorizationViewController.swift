@@ -25,7 +25,11 @@ final internal class AuthorizationViewController: UIViewController, PickerViewCo
         label.numberOfLines = 0
         label.textAlignment = .center
         label.font = UIFont.preferredFont(forTextStyle: .body)
-        label.textColor = .gray
+        if #available(iOS 13.0, *) {
+            label.textColor = UIColor.secondaryLabel
+        } else {
+            label.textColor = UIColor.gray
+        }
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -51,7 +55,11 @@ final internal class AuthorizationViewController: UIViewController, PickerViewCo
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = .white
+        if #available(iOS 13.0, *) {
+            view.backgroundColor = UIColor.systemBackground
+        } else {
+            view.backgroundColor = UIColor.white
+        }
 
         self.setupView()
     }

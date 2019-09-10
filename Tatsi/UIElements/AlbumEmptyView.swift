@@ -40,7 +40,11 @@ final internal class AlbumEmptyView: UIView {
         label.textAlignment = .center
         label.numberOfLines = 0
         label.font = UIFont.preferredFont(forTextStyle: .title2).withSize(26)
-        label.textColor = UIColor.lightGray
+        if #available(iOS 13.0, *) {
+            label.textColor = UIColor.secondaryLabel
+        } else {
+            label.textColor = UIColor.lightGray
+        }
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -50,7 +54,11 @@ final internal class AlbumEmptyView: UIView {
         label.textAlignment = .center
         label.numberOfLines = 0
         label.font = UIFont.preferredFont(forTextStyle: .body)
-        label.textColor = UIColor.lightGray
+        if #available(iOS 13.0, *) {
+            label.textColor = UIColor.secondaryLabel
+        } else {
+            label.textColor = UIColor.lightGray
+        }
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
