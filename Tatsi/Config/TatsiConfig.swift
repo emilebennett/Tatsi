@@ -72,6 +72,7 @@ public struct TatsiConfig {
 	public var donePressedFeedBack: (() -> Void)?
 	public var selectedAssetFeedBack: (() -> Void)?
 	public var deselectedAssetFeedBack: (() -> Void)?
+    public var maxSelectedFeedback: (() -> Void)?
 
     // MARK: - Internal features
     

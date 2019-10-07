@@ -391,6 +391,7 @@ extension AssetsGridViewController {
     override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
         guard self.selectedAssets.count < self.config?.maxNumberOfSelections ?? Int.max else {
             UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, LocalizableStrings.accessibilityAlertSelectionLimitReached)
+            config?.maxSelectedFeedback?()
             return false
         }
         return true
@@ -401,6 +402,7 @@ extension AssetsGridViewController {
             if !self.selectedAssets.contains(asset) {
                 guard self.selectedAssets.count < self.config?.maxNumberOfSelections ?? Int.max else {
                     UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, LocalizableStrings.accessibilityAlertSelectionLimitReached)
+                    config?.maxSelectedFeedback?()
                     return
                 }
                 self.selectedAssets.append(asset)
